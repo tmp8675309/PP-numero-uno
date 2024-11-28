@@ -31,6 +31,7 @@ class Book:
     def serialize(self):
         return json.dumps(self.__dict__)
 
+
 class Reader:
     def __init__(self, name, reader_id):
         self.name = name
@@ -60,6 +61,7 @@ class Reader:
             'borrowed_books': [b.serialize() for b in self.borrowed_books]
         })
 
+
 class Libertarian:
     def __init__(self, name):
         self.name = name
@@ -77,6 +79,7 @@ class Libertarian:
 
     def serialize(self):
         return json.dumps(self.__dict__)
+
 
 class Library:
     def __init__(self):
